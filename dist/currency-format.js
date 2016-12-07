@@ -1795,6 +1795,20 @@ angular.module('currencyFormat.iso', []).factory('currencyFormatService', ['$fil
         "rtl": false
       }
     },
+    "XBT": {
+      "name": "BitCoin",
+      "fractionSize": 7,
+      "symbol": {
+        "grapheme": "<i></i>",
+        "template": "<i></i>1",
+        "rtl": false
+      },
+      "uniqSymbol": {
+        "grapheme": "<i></i>",
+        "template": "<i></i>1",
+        "rtl": false
+      }
+    },
     "USN": {
       "name": "US Dollar (Next day)",
       "fractionSize": 2,
@@ -2151,6 +2165,6 @@ angular.module('currencyFormat', ['currencyFormat.iso']).filter('currencyFormat'
     } else {
       formattedCurrency = signAmount + formatedAmount + ' ' + currencyCode;
     }
-    return $sce.trustAsHtml('<span dir="' + (rtl ? 'rtl' : 'ltr') + '">' + formattedCurrency + '</span>');
+    return $sce.trustAsHtml('<span class="currency ' + currencyCode.toLowerCase() + '" dir="' + (rtl ? ' rtl' : ' ltr') + '">' + formattedCurrency + '</span>');
   };
 }]);

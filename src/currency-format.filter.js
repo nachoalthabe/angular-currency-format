@@ -58,6 +58,6 @@ angular.module('currencyFormat', ['currencyFormat.iso'])
                 formattedCurrency = signAmount + formatedAmount + ' ' + currencyCode;
             }
 
-            return $sce.trustAsHtml('<span dir="' + (rtl ? 'rtl' : 'ltr') + '">' + formattedCurrency + '</span>');
+            return $sce.trustAsHtml('<span class="currency ' + currencyCode.toLowerCase() + '" dir="' + (rtl ? ' rtl' : ' ltr') + '">' + formattedCurrency + '</span>');
         };
     }]);

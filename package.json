@@ -7,7 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "2.6.9",
-    "currency-format": "1.0.6",
+    "currency-format": "git@github.com:nachoalthabe/currency-format.git",
     "currency-number-format": "1.1.0",
     "del": "1.1.1",
     "gulp": "3.9.0",
